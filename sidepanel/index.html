@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="color-scheme" content="dark light" />
+        <link
+            rel="icon"
+            href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>"
+        />
+        <link rel="stylesheet" href="styles.css" />
+        <title>Webster</title>
+        <script>
+            if (!isSecureContext) location.protocol = "https:";
+        </script>
+        <script src="script.js" type="module"></script>
+    </head>
+    <body>
+        <div id="error-message"></div>
+        <div id="prompt-area">
+            <div
+                style="
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                "
+            >
+                <h2>Webster</h2>
+            </div>
+            <div id="response-area"></div>
+
+            <div
+                style="
+                    position: fixed;
+                    bottom: 0;
+                    width: 100%;
+                    box-shadow: 0 -2px 5px rgba(0, 0, 0, 0.1);
+                "
+            >
+                <div style="padding: 10px; border-top: 1px solid #ddd">
+                    <button
+                        id="summarize-button"
+                        style="font-size: 16px; font-weight: bold"
+                    >
+                        Summarize the page
+                    </button>
+                </div>
+                <input
+                    id="prompt-input"
+                    placeholder="Start your conversation here"
+                    style="
+                        width: 90%;
+                        padding: 10px;
+                        margin: 20px;
+                        border: 1px solid #ccc;
+                        border-radius: 4px;
+                    "
+                />
+
+                <div
+                    style="
+                        display: flex;
+                        justify-content: center;
+                        gap: 10px;
+                        margin-top: 10px;
+                    "
+                >
+                    <button
+                        type="button"
+                        id="submit-button"
+                        style="
+                            padding: 10px 20px;
+                            border-radius: 4px;
+                            background: #4285f4;
+                            color: white;
+                            border: none;
+                            cursor: pointer;
+                        "
+                    >
+                        Submit prompt
+                    </button>
+                    <button
+                        type="button"
+                        id="reset-button"
+                        style="
+                            padding: 10px 20px;
+                            border-radius: 4px;
+                            background: #ea4335;
+                            color: white;
+                            border: none;
+                            cursor: pointer;
+                        "
+                    >
+                        Reset session
+                    </button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
